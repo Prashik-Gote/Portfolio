@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* locamotive JS  */
+
+/* body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+  background-color: #0d0d0d;
+} */
+
+/* NavBar  */
+
+.nav-menu {
+  border: none;
+  background-color: #fff;
+  font-size: 1.5rem;
+  color: #fca61f;
+  cursor: pointer;
+}
+
+.navbar-nav a {
+  color: black;
+  position: relative;
+}
+
+.navbar-nav a:hover {
+  color: #fca61f;
+}
+
+.navbar-nav a:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  background: #fca61f;
+  width: 0;
+  left: 50%;
+  top: 25px;
+  transition:
+    width 0.3s,
+    left 0.3s;
+}
+
+.navbar-nav a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.c-btn {
+  background: #fca61f;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* expertise section starts */
+.heading small {
+  color: #6f34fe;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.heading h3 {
+  margin-top: 0.5rem;
+  color: #3f396d;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #6f34fe;
+}
+.service-card {
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 0.7rem;
+}
+
+/* skill Section  */
+
+.para-size {
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+section {
+  scroll-margin-top: 100px;
+}

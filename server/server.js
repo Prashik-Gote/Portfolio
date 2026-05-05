@@ -3,7 +3,14 @@ const mysql = require("mysql2");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+//better restrict to your frontend
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "*",
+  }),
+);
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -11,16 +18,24 @@ app.get("/", (req, res) => {
 });
 
 // ✅ MySQL connection
+// const db = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "1802",
+//   database: "portfolio_db",
+// });
+
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1802",
-  database: "portfolio_db",
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT,
 });
 
 db.connect((err) => {
   if (err) {
-    console.log("DB Error:", err);
+    console.log("DB Connection Error:", err);
   } else {
     console.log("MySQL Connected");
   }
@@ -38,13 +53,20 @@ app.post("/contact", (req, res) => {
       console.log(err);
       return res.status(500).send("Error saving data");
     }
-    res.send("Data saved successfully");
+    // res.send("Data saved successfully");
+    res.status(200).json({ message: "Data saved successfully" });
   });
 });
 
 // ✅ start server
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+// app.listen(5000, () => {
+//   console.log("Server running on port 5000");
+// });
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 //API to view Data
@@ -76,3 +98,11 @@ app.delete("/contact/:id", (req, res) => {
     res.send("Deleted successfully");
   });
 });
+
+//temp console logs to check env variables
+console.log("ENV CHECK:");
+console.log("HOST:", process.env.MYSQLHOST);
+console.log("USER:", process.env.MYSQLUSER);
+console.log("PORT:", process.env.MYSQLPORT);
+console.log("DATABASE:", process.env.MYSQLDATABASE);
+console.log("FRONTEND_URL:", process.env.FRONTEND_URL);

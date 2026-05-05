@@ -4,6 +4,8 @@ import { useRef } from "react";
 function Contact() {
   const formRef = useRef();
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const sendMail = async (e) => {
     e.preventDefault();
 
@@ -24,7 +26,7 @@ function Contact() {
 
     try {
       // ✅ 1. Save to Database
-      await fetch("http://localhost:5000/contact", {
+      await fetch(`${API_URL}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

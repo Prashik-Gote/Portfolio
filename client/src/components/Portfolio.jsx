@@ -15,7 +15,7 @@ function Portfolio() {
             <div className="hover:scale-105 transition duration-300">
               <div className="card rounded-lg shadow-md">
                 <img
-                  src="/src/assets/Cynthia Ugwu-3.png"
+                  src="/CynthiaUgwu.png"
                   className="rounded-t-lg"
                   alt="Cynthia Ugwu"
                 />
@@ -55,7 +55,7 @@ function Portfolio() {
             <div className="hover:scale-105 transition duration-300">
               <div className="rounded-lg shadow-md">
                 <img
-                  src="/src/assets/currency-converter-3.png"
+                  src="/currency-converter.png"
                   className="rounded-t-lg"
                   alt="Converter App"
                 />
@@ -87,7 +87,7 @@ function Portfolio() {
             <div className="hover:scale-105 transition duration-300">
               <div className="card rounded-lg shadow-md">
                 <img
-                  src="/src/assets/Weather.png"
+                  src="/Weather.png"
                   className="rounded-t-lg"
                   alt="Weather App"
                 />

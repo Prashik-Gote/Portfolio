@@ -55,7 +55,7 @@ function Skills() {
             <div>
               <div className="icon-card text-center mt-7">
                 <img
-                  src="/src/assets/tailwind-css.svg"
+                  src="/tailwind-css.svg"
                   alt="Tailwind"
                   className="w-14 ml-4"
                 />
@@ -87,11 +87,7 @@ function Skills() {
 
             <div>
               <div className="icon-card text-center mt-5">
-                <img
-                  src="/src/assets/icons8-microsoft-sql-server.svg"
-                  alt="MSSQL"
-                  className="w-14"
-                />
+                <img src="/sql-server.svg" alt="MSSQL" className="w-14" />
                 <p className="text mt-2">MSSQL</p>
               </div>
             </div>
@@ -137,7 +133,7 @@ function Skills() {
 
             <button className="bg-[#fca61f] text-white text-xl py-3 px-5 rounded-full mt-6 hover:translate-y-[-5px] transition-all duration-1000">
               <a
-                href="/src/assets/Prashik-Resume.pdf"
+                href="/Prashik-Resume.pdf"
                 download
                 className="no-underline text-white"
               >

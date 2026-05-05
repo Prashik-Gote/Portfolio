@@ -88,7 +88,7 @@ function Home() {
             className="bg-[#fca61f] text-white text-xl py-3 px-5 rounded-full mt-6"
           >
             <a
-              href="/src/assets/Prashik-Resume.pdf"
+              href="/Prashik-Resume.pdf"
               download
               className="no-underline text-white"
             >
@@ -99,7 +99,7 @@ function Home() {
 
         {/* Right Image */}
         <div className="w-full md:w-1/3 mt-8 md:mt-0">
-          <img id="home-image" src="/src/assets/p-removebg.png" alt="profile" />
+          <img id="home-image" src="/profilepic.png" alt="profile" />
         </div>
       </div>
     </section>

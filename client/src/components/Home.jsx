@@ -88,7 +88,7 @@ function Home() {
             className="bg-[#fca61f] text-white text-xl py-3 px-5 rounded-full mt-6"
           >
             <a
-              href="/Prashik-Resume1.pdf"
+              href="/Prashik-Resume.pdf"
               download
               className="no-underline text-white"
             >
